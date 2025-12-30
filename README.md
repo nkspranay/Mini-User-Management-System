@@ -177,7 +177,30 @@ SPA routing handled using vercel.json
   "email": "user@example.com",
   "password": "password123"
 }
-
+**Response**
+{
+  "access": "jwt_access_token_here",
+  "refresh": "jwt_refresh_token_here"
+}
+#### GET `/api/auth/me/`
+Header
+Authorization: Bearer <access_token>
+**Response**
+{
+  "email": "user@example.com",
+  "full_name": "John Doe",
+  "role": "user"
+}
+#### PUT `/api/users/change-password/`
+**Request**
+{
+  "old_password": "oldpassword123",
+  "new_password": "newpassword123"
+}
+**Response**
+{
+  "message": "Password updated successfully"
+}
 
 
 🧪 Testing
