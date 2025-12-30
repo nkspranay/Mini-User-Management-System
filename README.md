@@ -94,19 +94,20 @@ The project demonstrates a clean separation of concerns between backend and fron
 
 ## 📁 Project Structure
 Backend/
-├── core/ # Django project configuration
-├── users/ # User app (models, serializers, views)
-├── frontend/ # React (Vite) frontend
-│ ├── src/
-│ ├── public/
-│ ├── vercel.json # SPA routing configuration
-│ ├── package.json
-│ └── vite.config.js
+├── core/
+├── users/
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── vercel.json
+│   ├── package.json
+│   └── vite.config.js
 ├── manage.py
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
 └── README.md
+
 ## ▶️ Running the Project Locally
 
 ### Backend Setup
@@ -132,15 +133,16 @@ Frontend runs at:
 http://localhost:5173
 
 🔐 Environment Variables
-Backend (Backend/.env)
-SECRET_KEY=
-DEBUG=
-DATABASE_URL=
-ALLOWED_HOSTS=
-JWT_SECRET=
+### Backend (`Backend/.env`)
+SECRET_KEY=          # Django secret key
+DEBUG=               # Set true for dev
+DATABASE_URL=        # PostgreSQL connection string
+ALLOWED_HOSTS=       # Allowed hosts for Django
+JWT_SECRET=          # Secret for JWT signing
+
 
 Frontend (frontend/.env)
-VITE_API_BASE_URL=
+VITE_API_BASE_URL=   # Backend API base URL
 
 🚀 Deployment
 Backend
@@ -165,23 +167,24 @@ Frontend:
 https://mini-user-management-system-psi.vercel.app
 
 Backend:
-https://mini-user-management-system-y6eq.onrender.com/
+https://mini-user-management-system-y6eq.onrender.com
 
 📡 API Documentation
-Authentication
-POST /api/auth/signup/
-POST /api/auth/login/
-GET  /api/auth/me/
+### Authentication
+- **POST** /api/auth/signup/
+- **POST** /api/auth/login/
+- **GET**  /api/auth/me/
 
-User
-GET  /api/users/profile/
-PUT  /api/users/profile/
-PUT  /api/users/change-password/
+### User
+- **GET** /api/users/profile/
+- **PUT** /api/users/profile/
+- **PUT** /api/users/change-password/
 
-Admin
-GET    /api/admin/users/
-PATCH  /api/admin/users/{id}/activate/
-PATCH  /api/admin/users/{id}/deactivate/
+### Admin
+- **GET**   /api/admin/users/
+- **PATCH** /api/admin/users/{id}/activate/
+- **PATCH** /api/admin/users/{id}/deactivate/
+
 
 🧪 Testing
 
