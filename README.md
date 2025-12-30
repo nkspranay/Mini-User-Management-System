@@ -1,129 +1,125 @@
-Mini User Management System
+# Mini User Management System
 
-A full-stack web application for managing user accounts with authentication, role-based access control (RBAC), and basic user lifecycle management.
-Built as part of the Backend Developer Intern Assessment for Purple Merit Technologies.
+A full-stack user management application built using **Django (REST API)** and **React (Vite)**.  
+This project was developed as part of the **Backend Developer Intern Assessment for Purple Merit Technologies**.
 
-🔍 Project Overview & Purpose
+The application focuses on **secure authentication**, **role-based access control (RBAC)**, and **practical full-stack deployment**, rather than unnecessary complexity.
 
-The Mini User Management System allows users to sign up, log in, and manage their profiles securely, while administrators can manage user accounts through an admin dashboard.
+---
 
-The project demonstrates:
+## 🔍 Project Overview
 
-Secure authentication flows
+The Mini User Management System allows users to:
 
-Role-based authorization (admin vs user)
+- Register and authenticate securely
+- View and manage their own profile
+- Change their password
+- Access protected routes using JWT
 
-Clean backend architecture
+Administrators can:
 
-Practical frontend integration
+- View all users with pagination
+- Activate or deactivate user accounts
+- Enforce role-based access control
 
-Cloud deployment best practices
+The project demonstrates a clean separation of concerns between backend and frontend, along with real-world deployment practices.
 
-🛠 Tech Stack Used
-Backend
+---
 
-Python
+## 🧠 Key Concepts Demonstrated
 
-Django & Django REST Framework
+- JWT-based authentication
+- Role-based access control (Admin vs User)
+- Secure password handling
+- RESTful API design
+- Frontend–backend integration
+- Environment-based configuration
+- Cloud deployment
 
-JWT Authentication
+---
 
-PostgreSQL (cloud-hosted)
+## 🛠 Tech Stack
 
-bcrypt (Django default password hashing)
+### Backend
+- Python
+- Django
+- Django REST Framework
+- JWT Authentication
+- PostgreSQL (cloud-hosted on Render)
+- Django default password hashing (PBKDF2)
 
-Frontend
+### Frontend
+- React (Vite)
+- Axios
+- React Hooks
+- Protected Routes
 
-React (Vite)
+### Deployment
+- Backend: Render
+- Frontend: Vercel
+- Database: PostgreSQL (Render)
 
-React Hooks
+---
 
-Axios
+## ✨ Features
 
-Protected Routes
+### Authentication
+- User signup with name, email, and password
+- Email and password validation
+- Secure login and logout
+- JWT issued on signup and login
+- Endpoint to fetch authenticated user details
 
-Database
+### User Features
+- View own profile
+- Update name and email (explicit edit mode)
+- Change password (requires current password)
+- JWT-protected access to user routes
 
-PostgreSQL (Render-hosted)
+### Admin Features
+- View all users with pagination
+- Activate user accounts
+- Deactivate user accounts
+- Role-based access enforcement
 
-Deployment
+### Security
+- Password hashing
+- JWT authentication
+- Role-based access control (RBAC)
+- Input validation
+- Consistent error handling
+- Environment-based secrets management
 
-Backend: Render
+---
 
-Frontend: Vercel
-
-✨ Features
-Authentication
-
-User signup with full name, email, and password
-
-Email format and password strength validation
-
-JWT issued on signup and login
-
-Secure login/logout flow
-
-Endpoint to fetch current authenticated user
-
-User Features
-
-View own profile
-
-Update full name and email (explicit edit mode)
-
-Change password (requires current password)
-
-JWT-protected access
-
-Admin Features
-
-View all users with pagination
-
-Activate user accounts
-
-Deactivate user accounts
-
-Role-based access enforcement
-
-Security
-
-Password hashing
-
-JWT authentication
-
-Role-based access control (RBAC)
-
-Protected routes
-
-Input validation
-
-Consistent error responses
-
-Environment-based secrets
-
-📁 Project Structure
+## 📁 Project Structure
 Backend/
-├── core/                 # Django project settings
-├── users/                # User app (models, views, serializers)
-├── frontend/             # React (Vite) frontend
+├── core/ # Django project configuration
+├── users/ # User app (models, serializers, views)
+├── frontend/ # React (Vite) frontend
+│ ├── src/
+│ ├── public/
+│ ├── vercel.json # SPA routing configuration
+│ ├── package.json
+│ └── vite.config.js
 ├── manage.py
 ├── requirements.txt
-├── .gitignore
 ├── .env.example
+├── .gitignore
 └── README.md
+## ▶️ Running the Project Locally
 
-▶️ Setup Instructions (Run Locally)
-Backend Setup
+### Backend Setup
+
+```bash
 cd Backend
 python -m venv venv
-venv\Scripts\activate   # Windows
+venv\Scripts\activate    # Windows
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 
-
 Backend runs at:
-
 http://localhost:8000
 
 Frontend Setup
@@ -133,7 +129,6 @@ npm run dev
 
 
 Frontend runs at:
-
 http://localhost:5173
 
 🔐 Environment Variables
@@ -146,9 +141,6 @@ JWT_SECRET=
 
 Frontend (frontend/.env)
 VITE_API_BASE_URL=
-
-
-⚠️ .env files are excluded from the repository via .gitignore.
 
 🚀 Deployment
 Backend
@@ -163,15 +155,17 @@ Frontend
 
 Deployed on Vercel
 
-frontend/ configured as project root
+frontend/ configured as the project root
 
 SPA routing handled using vercel.json
 
 🌐 Live Deployment Links
 
-Frontend: https://mini-user-management-system-psi.vercel.app
+Frontend:
+https://mini-user-management-system-psi.vercel.app
 
-Backend: https://<your-backend-render-url>.onrender.com
+Backend:
+https://mini-user-management-system-y6eq.onrender.com/
 
 📡 API Documentation
 Authentication
@@ -191,7 +185,7 @@ PATCH  /api/admin/users/{id}/deactivate/
 
 🧪 Testing
 
-Backend unit tests written using Django REST Framework testing utilities
+Backend unit tests implemented using Django REST Framework utilities
 
 APIs tested using Postman
 
@@ -199,17 +193,17 @@ Authentication, authorization, and validation logic verified
 
 📽 Walkthrough Video
 
-A 3–5 minute screen-recorded walkthrough demonstrating:
+A 3–5 minute screen recording demonstrating:
 
-User signup & login
+User signup and login
 
 Role-based access control
 
 Admin dashboard functionality
 
-Profile update & password change
+Profile update and password change
 
-Live frontend & backend interaction
+Live frontend–backend interaction
 
 📎 Video Link: (to be added)
 
@@ -218,11 +212,4 @@ Live frontend & backend interaction
 Kedar Sai Pranay Nadipalli
 Engineering Student | Aspiring Software Developer
 
-✅ Assessment Compliance Summary
 
-✔ Backend requirements
-✔ Frontend requirements
-✔ Database design
-✔ Security best practices
-✔ Deployment completed
-✔ Documentation provided
