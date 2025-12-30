@@ -208,21 +208,13 @@ Authorization: Bearer <access_token>
 - Implemented 5+ backend unit tests using Django REST Framework testing utilities
 - Covered authentication, authorization, and validation logic
 
-📽 Walkthrough Video
+## 🎥 Walkthrough Video
 
-A 3–5 minute screen recording demonstrating:
+A short walkthrough video explaining the application flow, API usage, and key implementation details.
 
-User signup and login
+👉 Watch the walkthrough here:  
+https://drive.google.com/file/d/1U_3rlFJomNrxXJFrMfcKrf945tVGW758/view?usp=sharing
 
-Role-based access control
-
-Admin dashboard functionality
-
-Profile update and password change
-
-Live frontend–backend interaction
-
-📎 Video Link: (to be added)
 
 👤 Author
 
