@@ -163,11 +163,9 @@ SPA routing handled using vercel.json
 
 🌐 Live Deployment Links
 
-Frontend:
-https://mini-user-management-system-psi.vercel.app
+- **Frontend:** [mini-user-management-system-psi.vercel.app](https://mini-user-management-system-psi.vercel.app)
+- **Backend:** [mini-user-management-system-y6eq.onrender.com](https://mini-user-management-system-y6eq.onrender.com)
 
-Backend:
-https://mini-user-management-system-y6eq.onrender.com
 
 📡 API Documentation
 ### Authentication
