@@ -132,16 +132,16 @@ Frontend runs at:
 http://localhost:5173
 
 ## 🔐 Environment Variables
+
 ### Backend (`Backend/.env`)
-SECRET_KEY=          # Django secret key
-DEBUG=               # Set true for dev
-DATABASE_URL=        # PostgreSQL connection string
-ALLOWED_HOSTS=       # Allowed hosts for Django
-JWT_SECRET=          # Secret for JWT signing
+- `SECRET_KEY` — Django secret key
+- `DEBUG` — Set to `true` for development
+- `DATABASE_URL` — PostgreSQL connection string
+- `ALLOWED_HOSTS` — Allowed hosts for Django
+- `JWT_SECRET` — Secret key for JWT signing
 
-
-Frontend (frontend/.env)
-VITE_API_BASE_URL=   # Backend API base URL
+### Frontend (`frontend/.env`)
+- `VITE_API_BASE_URL` — Base URL of the backend API
 
 🚀 Deployment
 Backend
@@ -167,29 +167,23 @@ SPA routing handled using vercel.json
 
 
 📡 API Documentation
+
 ### Authentication
-- **POST** /api/auth/signup/
-- **POST** /api/auth/login/
-- **GET**  /api/auth/me/
 
-### User
-- **GET** /api/users/profile/
-- **PUT** /api/users/profile/
-- **PUT** /api/users/change-password/
+#### POST `/api/auth/login/`
 
-### Admin
-- **GET**   /api/admin/users/
-- **PATCH** /api/admin/users/{id}/activate/
-- **PATCH** /api/admin/users/{id}/deactivate/
+**Request**
+{
+  "email": "user@example.com",
+  "password": "password123"
+}
+
 
 
 🧪 Testing
 
-Backend unit tests implemented using Django REST Framework utilities
-
-APIs tested using Postman
-
-Authentication, authorization, and validation logic verified
+- Implemented 5+ backend unit tests using Django REST Framework testing utilities
+- Covered authentication, authorization, and validation logic
 
 📽 Walkthrough Video
 
