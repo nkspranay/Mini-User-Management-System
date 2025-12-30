@@ -112,7 +112,6 @@ Backend/
 
 ### Backend Setup
 
-```bash
 cd Backend
 python -m venv venv
 venv\Scripts\activate    # Windows
@@ -132,7 +131,7 @@ npm run dev
 Frontend runs at:
 http://localhost:5173
 
-🔐 Environment Variables
+## 🔐 Environment Variables
 ### Backend (`Backend/.env`)
 SECRET_KEY=          # Django secret key
 DEBUG=               # Set true for dev
