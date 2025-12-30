@@ -47,10 +47,10 @@ The project demonstrates secure authentication, role-based access control (RBAC)
 ## 🌐 Live URLs
 
 - **Backend API:**  
-  https://YOUR-BACKEND-URL.onrender.com
+  [https://YOUR-BACKEND-URL.onrender.com](https://mini-user-management-system-y6eq.onrender.com/)
 
 - **Frontend Application:**  
-  https://YOUR-FRONTEND-URL.vercel.app
+  [https://YOUR-FRONTEND-URL.vercel.app](https://mini-user-management-system-psi.vercel.app/profile)
 
 ---
 
